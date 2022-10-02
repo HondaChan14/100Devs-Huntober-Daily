@@ -16,30 +16,26 @@
 
 //Please create a function that will fix a given string if this mistake before incalculable damage can be done!
 
-
-function fixString(str){
-    const obj = {
-        '0': 'O',
-        '1': 'I', 
-        '2': 'Z', 
-        '3': 'E', 
-        'h': '4', 
-        '5': 'S', 
-        '6': 'G', 
-        '7': 'L', 
-        'B': '8', 
-        'q': '9'
-    };
-
+function fixString(str) {
+    let obj = {
+         '0': 'O',      
+         '1': 'I',      
+         '2': 'Z',      
+         '3': 'E',      
+         'h': '4',      
+         '5': 'S',
+         '6': 'G',
+         '7': 'L',
+         'B': '8',
+         'q': '9'
+    }
     let arr = str.split('')
 
     for(let i = 0; i < arr.length; i++){
-        if(obj[arr[i]] ){
-        console.log(arr)    
-        arr[i] = obj[arr[i]]
+        if(obj[arr[i]]){
+            arr[i] = obj[arr[i]]
         }
     }
-    
     return arr.join('')
 }
 console.log(fixString("PR0-T1P #hqB: 1T'5 N1C3 T0 5AY H3770."))
